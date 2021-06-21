@@ -1,0 +1,13 @@
+@import 'src/styles-variable.scss';
+
+.header-container {
+  height: 40px;
+}
+
+.brand-font-size {
+  font-size: 1.56rem !important;
+}
+
+.navbar-brand:hover {
+  color:  $textLight !important;
+}
