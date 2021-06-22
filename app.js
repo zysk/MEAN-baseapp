@@ -1,23 +1,31 @@
 /* Package declarations */
 const express = require('express');
 const _path = require('path');
-const logger = require('morgan');
-const cors = require('cors');
-const createError = require('http-errors');
-const cookieParser = require('cookie-parser');
+const _logger = require('morgan');
+const _cors = require('cors');
+const _createError = require('http-errors');
+const _cookieParser = require('cookie-parser');
 const _swigTemplates = require('swig-templates');
-const compression = require('compression');
+const _compression = require('compression');
+
+/* ENV config */
 require('dotenv').config();
+
+/* Database connection */
+require('./src/_database');
+
+/* API routes config */
+const _apis = require('./src/routes/apis_manager');
 
 /* Express config instance */
 const _app = express();
 
 /* Compress files running through Express server */
-_app.use(compression());
+_app.use(_compression());
 
 /* Support for CORS */
 const _allowedOrigins = process.env.ALLOWED_DOMAINS.split(',');
-_app.use(cors({
+_app.use(_cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
@@ -29,9 +37,6 @@ _app.use(cors({
   }
 }));
 
-/* API routes config */
-const _apis = require('./routes/apis_manager');
-
 /* Set custom variable accessor from Node layer to UI */
 _swigTemplates.setDefaults({ varControls: [ '<%=', '%>' ] });
 
@@ -40,17 +45,17 @@ _app.engine('html', _swigTemplates.renderFile);
 _app.set('views', _path.join(__dirname, 'views'));
 _app.set('view engine', 'html');
 
-/* HTTP request logger */
-_app.use(logger('dev'));
+/* HTTP request _logger */
+_app.use(_logger('dev'));
 
 /* Allow only strigified data to pass over URLs */
-_app.use(express.urlencoded({ extended: false }));
+_app.use(express.urlencoded());
 
 /* Support JSON-encoded bodies */
 _app.use(express.json());
 
 /* Support Cookies */
-_app.use(cookieParser());
+_app.use(_cookieParser());
 
 /* Support for static file loading */
 _app.use(express.static(_path.join(__dirname, 'public')));
@@ -62,7 +67,7 @@ _app.use('/', express.static(_path.join(__dirname, `/views/production/${ process
 _app.use('/api', _apis);
 
 /* Catch 404 and forward to error handler */
-_app.use((req, res, next) => next(createError(404)));
+_app.use((req, res, next) => next(_createError(404)));
 
 /* Error handler */
 _app.use((err, req, res, next) => {
