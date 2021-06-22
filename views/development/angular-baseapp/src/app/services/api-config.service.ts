@@ -12,7 +12,7 @@ export class ApiConfigService {
 
   API = {
     login: '/user/login',
-    loggedInUser: '/user/logged-in-user',
+    loggedInUser: '/user/list-all-users',
     logout: '/user/logout'
   };
 }

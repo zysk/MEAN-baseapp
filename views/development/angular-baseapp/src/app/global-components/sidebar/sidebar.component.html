@@ -1,8 +1,6 @@
 <main class="main-container">
-  <div class="d-flex h-100 w-100 position-relative">
-    <!-- Router Outlet Content goes here -->
-    <div class="flex-fill h-100 position-relative content-projector-size" [ngClass]="{'sidebar-expanded': _isSidebarExpanded}">
-      <ng-content></ng-content>
-    </div>
+  <!-- Router Outlet Content goes here -->
+  <div class="content-projector">
+    <ng-content></ng-content>
   </div>
 </main>

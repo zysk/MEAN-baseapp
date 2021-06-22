@@ -1,4 +1,4 @@
-<div *ngIf="_dataShare['showAlert']" [@fade]="'in'" class="h-100 position-relative d-flex justify-content-center align-items-center alert-box-overlay" (click)="hideWindow()">
+<div *ngIf="_dataShare['showAlert']" [@fade]="'in'" class="h-full position-relative d-flex justify-content-center align-items-center alert-box-overlay" (click)="hideWindow()">
   <div class="d-flex justify-content-between align-items-center px-5 py-4 bg-white rounded">
     <ng-container [ngSwitch]="_eventType">
       <em *ngSwitchCase="'offline'" class="alert-icon fas fa-signal text-danger"></em>

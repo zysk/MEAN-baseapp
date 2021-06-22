@@ -1,13 +1,13 @@
 @import 'src/styles-variable.scss';
 
 .header-container {
-  height: 40px;
+  @apply h-10 flex justify-center items-center bg-black text-white;
 }
-
-.brand-font-size {
+.brand {
   font-size: 1.56rem !important;
+  @apply text-white;
 }
-
-.navbar-brand:hover {
+.brand:hover {
   color:  $textLight !important;
+  @apply text-white;
 }
