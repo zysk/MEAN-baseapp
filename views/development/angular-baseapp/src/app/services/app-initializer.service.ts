@@ -22,7 +22,7 @@ export class AppInitializerService implements OnDestroy {
   getRequiredData(): Promise<any> {
     return new Promise((resolve, reject) => {
       this._httpClient.getRequest(this._apiConfig['API']['loggedInUser']).pipe(takeUntil(this._destroy$)).subscribe((response: any) => {
-        if (response['status'] === 'success') {
+        if (response['status'] == 'Success') {
           this._dataShare['loggedInUserDetails'] = JSON.parse(JSON.stringify(response['data']));
           resolve(true);
         } else {
@@ -40,6 +40,6 @@ export class AppInitializerService implements OnDestroy {
   // Unsubscribe from the subject itself
   ngOnDestroy(): void {
     this._destroy$.next();
-    this._destroy$.complete();
+    this._destroy$.unsubscribe();
   }
 }

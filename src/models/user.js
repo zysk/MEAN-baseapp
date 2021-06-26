@@ -12,7 +12,10 @@ const _userSchema = new mongoose.Schema({
     lowercase: true,
     validate: (value) => _validator.isEmail(value),
   }
-}).plugin(_timeStamps);
+});
+
+/* Add/Update timestamp on every query */
+_userSchema.plugin(_timeStamps);
 
 /**
  * Define custom properties

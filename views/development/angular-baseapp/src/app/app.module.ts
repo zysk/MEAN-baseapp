@@ -17,10 +17,6 @@ import { SharedModule } from './modules/shared/shared.module';
 import { AppInitializerService } from './services/app-initializer.service';
 import { NotifyConnectionComponent } from './global-components/notify-connection/notify-connection.component';
 
-export function loadInitializer(appInitializer: AppInitializerService) {
-  return () => appInitializer.getRequiredData();
-}
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +45,7 @@ export function loadInitializer(appInitializer: AppInitializerService) {
     AppInitializerService,
     {
       provide: APP_INITIALIZER,
-      useFactory: loadInitializer,
+      useFactory: (_appInitializer: AppInitializerService) => () => _appInitializer.getRequiredData(),
       deps: [AppInitializerService],
       multi: true
     },

@@ -66,11 +66,11 @@ export class HttpErrorHandlerService {
         });
         break;
       default:
-        Swal.fire({
-          title: 'Oops',
-          text: 'There seems to be an error. Please try again. If the problem persists, reach out to the support team.',
-          icon: 'error',
-        });
+        // Swal.fire({
+        //   title: 'Oops',
+        //   text: 'There seems to be an error. Please try again. If the problem persists, reach out to the support team.',
+        //   icon: 'error',
+        // });
     }
   }
 

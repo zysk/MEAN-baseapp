@@ -23,6 +23,9 @@ const _app = express();
 /* Compress files running through Express server */
 _app.use(_compression());
 
+/* Show favicon before UI hits */
+_app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
+
 /* Support for CORS */
 const _allowedOrigins = process.env.ALLOWED_DOMAINS.split(',');
 _app.use(_cors({

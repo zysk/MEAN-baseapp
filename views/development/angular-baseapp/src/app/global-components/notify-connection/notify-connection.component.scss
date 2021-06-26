@@ -1,6 +1,7 @@
 .alert-box-overlay {
   background-color: rgba(0, 0, 0, 0.8);
+  @apply h-full relative flex justify-center items-center;
 }
-.alert-icon {
-  font-size: 1.5em;
+.alert-container {
+  @apply flex justify-between items-center px-5 py-4 bg-gray-50 rounded;
 }

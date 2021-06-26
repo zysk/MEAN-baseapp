@@ -41,7 +41,7 @@ export class DataShareService implements OnDestroy  {
   // Unsubscribe from the subject itself
   ngOnDestroy(): void {
     this._destroy$.next();
-    this._destroy$.complete();
+    this._destroy$.unsubscribe();
     localStorage.clear();
   }
 }

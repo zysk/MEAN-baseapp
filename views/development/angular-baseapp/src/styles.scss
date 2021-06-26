@@ -2,19 +2,14 @@
 @import './styles-variable.scss';
 // If you want to use any custom font, import here
 // @import "src/assets/fonts/_fonts";
+// Import Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 // Theme styles imported here
 @import "assets/theme-style-files/theme.scss";
 // Import TailwindCSS
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-// If you want to manupulate bootstrap's default 12 column layout or any other configuration,
-// import bootstrap.min.css in this file override the desired property
-
-.small-font {
-  font-size: $smallFontSize;
-}
-.fa, .fas, .far, .fab {
-  font-family: $fontawesome;
-  font-weight: 600 !important;
-}

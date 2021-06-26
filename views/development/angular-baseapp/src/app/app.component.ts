@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    // Reload the app when new version is available
+    /* Reload the app when new version is available */
     if (this._swUpdate['isEnabled']) {
       this._swUpdate['available'].pipe(takeUntil(this._destroy$)).subscribe((res: any) => {
         if (confirm('New version is available. Load New Version!!')) {
@@ -43,10 +43,10 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
 
-  // Unsubscribe from the subject itself
+  /* Unsubscribe from the subject itself */
   ngOnDestroy(): void {
     this._destroy$.next();
-    this._destroy$.complete();
+    this._destroy$.unsubscribe();
   }
 
 }

@@ -1,11 +1,8 @@
 @import 'src/styles-variable.scss';
 
 .main-container {
-  // height: calc(100% - 63px);
-  // width: 100%;
-  // position: relative;
-  // overflow-y: auto;
-  @apply flex-auto w-full relative overflow-y-auto;
+  height: calc(100% - 4rem);
+  @apply relative overflow-y-auto;
 }
 .content-projector {
   @apply h-full relative flex justify-center items-center;

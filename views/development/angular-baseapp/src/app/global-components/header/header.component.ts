@@ -14,10 +14,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void { }
 
-  // Unsubscribe from the subject itself
+  /* Unsubscribe from the subject itself */
   ngOnDestroy(): void {
     this._destroy$.next();
-    this._destroy$.complete();
+    this._destroy$.unsubscribe();
   }
 
 }

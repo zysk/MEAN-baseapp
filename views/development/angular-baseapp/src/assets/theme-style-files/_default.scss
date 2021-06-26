@@ -3,8 +3,8 @@
   font-family: Calibri;
 }
 
-.custom-body {
-  @apply h-screen flex flex-col m-0 p-0 overflow-hidden;
+html body {
+  @apply h-screen m-0 p-0 overflow-hidden;
 }
 
 a {
