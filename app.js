@@ -6,6 +6,7 @@ const _cors = require('cors');
 const _createError = require('http-errors');
 const _cookieParser = require('cookie-parser');
 const _swigTemplates = require('swig-templates');
+const _favicon = require('serve-favicon');
 const _compression = require('compression');
 
 /* ENV config */
@@ -24,7 +25,7 @@ const _app = express();
 _app.use(_compression());
 
 /* Show favicon before UI hits */
-_app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
+_app.use(_favicon(_path.join(__dirname, 'public/images', 'favicon.ico')));
 
 /* Support for CORS */
 const _allowedOrigins = process.env.ALLOWED_DOMAINS.split(',');

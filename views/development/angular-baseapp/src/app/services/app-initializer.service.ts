@@ -23,7 +23,7 @@ export class AppInitializerService implements OnDestroy {
     return new Promise((resolve, reject) => {
       this._httpClient.getRequest(this._apiConfig['API']['loggedInUser']).pipe(takeUntil(this._destroy$)).subscribe((response: any) => {
         if (response['status'] == 'Success') {
-          this._dataShare['loggedInUserDetails'] = JSON.parse(JSON.stringify(response['data']));
+          this._dataShare['loggedInUserDetails'] = JSON.parse(JSON.stringify(response['response_body']));
           resolve(true);
         } else {
           resolve(true);
