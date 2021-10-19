@@ -7,6 +7,7 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,9 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
+  value = '';
+  elementType = NgxQrcodeElementTypes.URL;
+  correctionLevel = NgxQrcodeErrorCorrectionLevels.LOW;
   private _destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(
@@ -26,6 +30,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.value = this._dataShare['loggedInUserDetails'];
     this._spinner.hide();
   }
 

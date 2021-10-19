@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www && set DEBUG=MEAN-baseapp:*"
   },
   "dependencies": {
+    "authenticator": "^1.1.5",
     "compression": "1.7.4",
     "cookie-parser": "1.4.5",
     "cors": "2.8.5",
@@ -22,6 +23,7 @@
     "nodemon": "2.0.7",
     "passport": "0.4.1",
     "passport-local-mongoose": "6.1.0",
+    "qrcode": "^1.4.4",
     "serve-favicon": "2.5.0",
     "swig-templates": "2.0.3",
     "validator": "13.6.0"
