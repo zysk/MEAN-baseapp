@@ -7,7 +7,7 @@
     "npm": "6.*"
   },
   "lint-staged": {
-    "views/development/MEAN-baseapp/src/**/*.{js,jsx,ts,tsx,json,css,scss}": [
+    "views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json}": [
       "npm run format",
       "npm run lint:fix"
     ]
@@ -16,10 +16,10 @@
     "postinstall": "husky install",
     "pre-commit": "lint-staged",
     "typesync": "typesync --ignoredeps=dev",
-    "format": "prettier \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json,css,scss}\" --write",
-    "lint": "eslint \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json,css,scss}\" --fix",
-    "lint:fix": "eslint \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json,css,scss}\" --fix --quiet --fix-type layout --format=codeframe",
-    "lint:check": "eslint \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json,css,scss}\" --fix-dry-run --fix-type layout --format=codeframe",
+    "format": "prettier --write \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "eslint \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json}\" --fix",
+    "lint:fix": "eslint \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json}\" --fix --quiet --fix-type layout --format=codeframe",
+    "lint:check": "eslint \"views/development/angular-baseapp/src/**/*.{js,jsx,ts,tsx,json}\" --fix-dry-run --fix-type layout --format=codeframe",
     "start:dev": "nodemon ./bin/www && set DEBUG=MEAN-baseapp:*",
     "start:prod": "node --optimize-for-size --gc-interval=2 ./bin/www"
   },
