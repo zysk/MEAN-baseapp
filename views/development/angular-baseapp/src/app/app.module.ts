@@ -65,7 +65,7 @@ import { NotifyConnectionComponent } from './global-components/notify-connection
     //   useValue: window.location.pathname
     // },
     /**
-     * By default under Angular's LocationStrategy, it have PathLocationStrategy and HashLocationStrategy and by default Angular uses PathLocationStrategy. HashLocationStrategy has some abstract classes from where I have implemented one in my custom Service and given implementation for that. But Angular doesn't know about it until I tell explicitely. So I am registering my custom implementation under LocationStrategy. Why under LocationStrategy coz thats the main implementation of Angular Location Strategy. And I am telling Angular to use HashLocationStrategy instead of PathLocationStrategy in app-routing.module.ts.
+     * By default under Angular's LocationStrategy, it have PathLocationStrategy and HashLocationStrategy and by default Angular uses PathLocationStrategy. HashLocationStrategy has some abstract classes from where I have implemented one in my custom Service and given implementation for that. But Angular doesn't know about it until I tell explicitly. So I am registering my custom implementation under LocationStrategy. Why under LocationStrategy coz thats the main implementation of Angular Location Strategy. And I am telling Angular to use HashLocationStrategy instead of PathLocationStrategy in app-routing.module.ts.
      */
     // {
     //   provide: LocationStrategy,
