@@ -77,10 +77,10 @@ app.use((req, res, next) => next(createError(404)));
 app.use((err, req, res, next) => {
   // Set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = process.env.NODEENV == 'development' ? err : {};
+  res.locals.error = process.env.NODE_ENV == 'development' ? err : {};
   // Render error page
   res.status(err.status || 500);
-  res.render('error404', { appName: process.env.APPNAME });
+  res.render('error404', { appName: process.env.APP_NAME });
 });
 
 module.exports = app;
