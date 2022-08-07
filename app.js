@@ -1,86 +1,86 @@
 /* Package declarations */
+const path = require('path');
+const logger = require('morgan');
 const express = require('express');
-const _path = require('path');
-const _logger = require('morgan');
-const _cors = require('cors');
-const _createError = require('http-errors');
-const _cookieParser = require('cookie-parser');
-const _swigTemplates = require('swig-templates');
-const _favicon = require('serve-favicon');
-const _compression = require('compression');
+const favicon = require('serve-favicon');
+const session = require('express-session');
+const createError = require('http-errors');
+const compression = require('compression');
+const cookieParser = require('cookie-parser');
+const swigTemplates = require('swig-templates');
 
 /* ENV config */
 require('dotenv').config();
 
-/* Database connection */
-require('./src/_database');
-
 /* API routes config */
-const _apis = require('./src/routes/apis_manager');
+const apis = require('./routes/apisManager');
 
 /* Express config instance */
-const _app = express();
+const app = express();
 
 /* Compress files running through Express server */
-_app.use(_compression());
-
-/* Show favicon before UI hits */
-_app.use(_favicon(_path.join(__dirname, 'public/images', 'favicon.ico')));
+app.use(compression());
 
 /* Support for CORS */
-const _allowedOrigins = process.env.ALLOWED_DOMAINS.split(',');
-_app.use(_cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (_allowedOrigins.indexOf(origin) == -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  }
+app.use((req, res, next) => {
+  /* Set headers to allow cross origin request */
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
+  next();
+});
+
+/* Session settings */
+app.set('trust proxy', 1); // trust first proxy
+app.use(session({
+  name: `MEAN-baseapp${ process.env.PORT }`,
+  secret: 'MEAN-baseapp',
+  resave: false,
+  saveUninitialized: true,
 }));
 
 /* Set custom variable accessor from Node layer to UI */
-_swigTemplates.setDefaults({ varControls: [ '<%=', '%>' ] });
+swigTemplates.setDefaults({ varControls: ['<%=', '%>'] });
 
 /* Custom view engine setup */
-_app.engine('html', _swigTemplates.renderFile);
-_app.set('views', _path.join(__dirname, 'views'));
-_app.set('view engine', 'html');
+app.engine('html', swigTemplates.renderFile);
+app.set('views', path.join(process.cwd(), 'views'));
+app.set('view engine', 'html');
 
-/* HTTP request _logger */
-_app.use(_logger('dev'));
+/* HTTP request logger */
+app.use(logger('dev'));
 
-/* Allow only strigified data to pass over URLs */
-_app.use(express.urlencoded());
+/* Allow only stringified data to pass over URLs */
+app.use(express.urlencoded({ extended: false }));
 
 /* Support JSON-encoded bodies */
-_app.use(express.json());
+app.use(express.json());
+
+/* Show favicon before UI hits */
+app.use(favicon(path.join(process.cwd(), '/public/favicon.ico')));
 
 /* Support Cookies */
-_app.use(_cookieParser());
-
-/* Support for static file loading */
-_app.use(express.static(_path.join(__dirname, 'public')));
-
-/* UI route */
-_app.use('/', express.static(_path.join(__dirname, `/views/production/${ process.env.APP_DIRECTORY }`)));
+app.use(cookieParser());
 
 /* API route */
-_app.use('/api', _apis);
+app.use('/api', apis);
+
+/* UI route */
+app.use('/', express.static(path.join(process.cwd(), `/views/production/angular-baseapp`)));
+
+/* Wildcard route */
+app.use('*', express.static(path.join(process.cwd(), `/views/production/angular-baseapp`)));
 
 /* Catch 404 and forward to error handler */
-_app.use((req, res, next) => next(_createError(404)));
+app.use((req, res, next) => next(createError(404)));
 
 /* Error handler */
-_app.use((err, req, res, next) => {
+app.use((err, req, res, next) => {
   // Set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = process.env.ENV == 'development' ? err : {};
+  res.locals.error = process.env.NODEENV == 'development' ? err : {};
   // Render error page
   res.status(err.status || 500);
-  res.render('error404', { appName: process.env.APP_NAME });
+  res.render('error404', { appName: process.env.APPNAME });
 });
 
-module.exports = _app;
+module.exports = app;

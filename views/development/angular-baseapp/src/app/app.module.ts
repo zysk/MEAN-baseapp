@@ -60,17 +60,17 @@ import { NotifyConnectionComponent } from './global-components/notify-connection
     /**
      * As I have used my custom implementation for the base url. I have to add the latest base url in APP_BASE_HREF so that Angular will know that okay, this is the base url now. I have to use this.
      */
-    {
-      provide: APP_BASE_HREF,
-      useValue: window.location.pathname
-    },
+    // {
+    //   provide: APP_BASE_HREF,
+    //   useValue: window.location.pathname
+    // },
     /**
      * By default under Angular's LocationStrategy, it have PathLocationStrategy and HashLocationStrategy and by default Angular uses PathLocationStrategy. HashLocationStrategy has some abstract classes from where I have implemented one in my custom Service and given implementation for that. But Angular doesn't know about it until I tell explicitely. So I am registering my custom implementation under LocationStrategy. Why under LocationStrategy coz thats the main implementation of Angular Location Strategy. And I am telling Angular to use HashLocationStrategy instead of PathLocationStrategy in app-routing.module.ts.
      */
-    {
-      provide: LocationStrategy,
-      useClass: BaseUrlManagerService
-    }
+    // {
+    //   provide: LocationStrategy,
+    //   useClass: BaseUrlManagerService
+    // }
   ],
   bootstrap: [AppComponent]
 })

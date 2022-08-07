@@ -10,7 +10,7 @@ This README would document steps which are necessary to get your application up 
 
 * ### Version ###
 
-    Angular 12.0.5 <br>
+    Angular 14.* <br>
     Express 4.17.1 <br>
     Mongoose 5.12.14<br>
 

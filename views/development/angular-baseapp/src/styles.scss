@@ -1,15 +1,26 @@
-// Declare all CSS variable in styles-variables.scss file and import
-@import './styles-variable.scss';
 // If you want to use any custom font, import here
 // @import "src/assets/fonts/_fonts";
+// Material Default Theme
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// Material Icons
+@import "~material-icons/iconfont/material-icons.scss";
 // Import Fontawesome
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/brands';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+// If you want to manipulate bootstrap's default 12 column layout or any other configuration,
+// import bootstrap.min.css in this file override the desired property
+// Import Bootstrap
+@import "~bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap icons
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
 // Theme styles imported here
 @import "assets/theme-style-files/theme.scss";
-// Import TailwindCSS
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+// Declare all CSS variable in styles-variables.scss file and import
+@import "./styles-variable.scss";
+// Custom CSS/SCSSde
+@import "~@angular/material/theming";
+$custom-typography: mat-typography-config($font-family: "system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
+  );
+@include mat-core($custom-typography);

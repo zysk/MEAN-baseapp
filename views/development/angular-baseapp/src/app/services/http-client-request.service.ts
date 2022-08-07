@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -35,8 +34,7 @@ export class HttpClientRequestService {
     return this._httpClient.delete(this.constructFullAPI(url), params);
   }
 
-  constructFullAPI(url: string) {
-    return `${environment['apiEndPoint']}${url}`;
+  constructFullAPI(url: any): string {
+    return `/api/${url}`;
   }
-
 }

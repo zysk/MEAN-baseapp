@@ -1,77 +1,29 @@
 [
   {
-    "moduleName": "Forms",
-    "moduleLink": "/forms",
-    "moduleIcon": "fab fa-wpforms",
-    "currentModule": "forms",
-    "pages": [
-      {
-        "pageLink": "/forms/template-form",
-        "pageName": "Template Form",
-        "childOf": "forms"
-      },
-      {
-        "pageLink": "/forms/reactive-form",
-        "pageName": "Reactive Form",
-        "childOf": "forms"
-      },
-      {
-        "pageLink": "/forms/dynamic-form",
-        "pageName": "Dynamic Form",
-        "childOf": "forms"
-      }
-    ]
+    "moduleName": "Dashboard",
+    "moduleLink": "/dashboard",
+    "moduleIcon": "bi-house",
+    "currentModule": "dashboard",
+    "index": 0,
+    "order": 1,
+    "active": false
   },
   {
-    "moduleName": "Charts",
-    "moduleLink": "/charts",
-    "moduleIcon": "fas fa-chart-line",
-    "currentModule": "charts",
-    "pages": [
-      {
-        "pageLink": "/charts/highcharts-integration",
-        "pageName": "Highcharts",
-        "childOf": "charts"
-      }
-    ]
+    "moduleName": "Bookings",
+    "moduleLink": "/bookings",
+    "moduleIcon": "bi-megaphone",
+    "currentModule": "bookings",
+    "index": 1,
+    "order": 2,
+    "active": false
   },
   {
-    "moduleName": "Directives",
-    "moduleLink": "/directives",
-    "moduleIcon": "fas fa-magic",
-    "currentModule": "directives",
-    "pages": [
-      {
-        "pageLink": "/directives/understanding-directives",
-        "pageName": "Understanding Directives",
-        "childOf": "directives"
-      }
-    ]
-  },
-  {
-    "moduleName": "Decorators",
-    "moduleLink": "/decorators",
-    "moduleIcon": "fas fa-spa",
-    "currentModule": "decorators",
-    "pages": [
-      {
-        "pageLink": "/decorators/understanding-decorators",
-        "pageName": "Understanding Decorators",
-        "childOf": "decorators"
-      }
-    ]
-  },
-  {
-    "moduleName": "Routing",
-    "moduleLink": "/routing",
-    "moduleIcon": "fas fa-route",
-    "currentModule": "routing",
-    "pages": [
-      {
-        "pageLink": "/routing/basics",
-        "pageName": "Basics",
-        "childOf": "routing"
-      }
-    ]
+    "moduleName": "Equipment",
+    "moduleLink": "/equipment",
+    "moduleIcon": "bi-grid",
+    "currentModule": "equipment",
+    "index": 2,
+    "order": 3,
+    "active": false
   }
 ]

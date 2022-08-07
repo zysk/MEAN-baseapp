@@ -15,7 +15,8 @@
   pointer-events: none;
 }
 
-.cdk-global-overlay-wrapper, .cdk-overlay-container {
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
   @extend .common-style;
   pointer-events: none;
 }

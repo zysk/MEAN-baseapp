@@ -2,8 +2,6 @@
 
 .main-container {
   height: calc(100% - 4rem);
-  @apply relative overflow-y-auto;
-}
-.content-projector {
-  @apply h-full relative flex justify-center items-center;
+  position: relative;
+  overflow-y: auto;
 }
