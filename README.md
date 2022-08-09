@@ -15,6 +15,7 @@ This README would document steps which are necessary to get your application up 
 ## Configuration and Instructions ##
 
   1. `Application name:` Copy current application name from `package.json` file, hit `ctrl+shift+f` or `command+shift+f`, paste and search the name. Replace all the matching search results with your desired application name. Then change project directory name with the given application name.
+  2. Keep either bootstrap or tailwind angular repo as per you project need. And delete the postfix `bootstrap` or `tailwind` word from the directory name or angular repo.
   2. Run `npm install` in node layer and UI layer to install dependencies.
   3. By default, Node application will target to UI's `production` code, hit `http://localhost:4200` from browser to run UI's `development` code.
 

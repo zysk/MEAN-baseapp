@@ -5,7 +5,7 @@ import { tap } from 'rxjs/operators';
 import { HttpErrorHandlerService } from './http-error-handler.service';
 
 @Injectable()
-export class HttpIntercepterService implements HttpInterceptor {
+export class HttpInterceptorService implements HttpInterceptor {
 
   /**
    * This service can be used to intercept all HTTP requests.
