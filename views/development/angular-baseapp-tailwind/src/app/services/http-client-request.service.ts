@@ -36,7 +36,7 @@ export class HttpClientRequestService {
   }
 
   constructFullAPI(url: string) {
-    return `${environment['apiEndPoint']}${url}`;
+    return `/api/${url}`;
   }
 
 }
