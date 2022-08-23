@@ -1,9 +1,0 @@
-<div *ngIf="_dataShare['showAlert']" [@fade]="'in'" class="alert-box-overlay" (click)="hideWindow()">
-  <div class="alert-container">
-    <ng-container [ngSwitch]="_eventType">
-      <em *ngSwitchCase="'offline'" class="text-sm fas fa-signal text-red-500 pr-2"></em>
-      <em *ngSwitchCase="'online'" class="text-sm fas fa-signal text-green-500 pr-2"></em>
-    </ng-container>
-    <div class="font-semibold"><span class="text-sm">{{_message}}</span></div>
-  </div>
-</div>
