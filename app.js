@@ -9,7 +9,6 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const swigTemplates = require('swig-templates');
 
-
 /* ENV config */
 require('dotenv').config();
 
