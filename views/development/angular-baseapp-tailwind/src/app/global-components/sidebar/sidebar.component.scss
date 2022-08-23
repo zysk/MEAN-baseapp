@@ -1,9 +1,0 @@
-@import 'src/styles-variable.scss';
-
-.main-container {
-  height: calc(100% - 4rem);
-  @apply relative overflow-y-auto;
-}
-.content-projector {
-  @apply h-full relative flex justify-center items-center;
-}
