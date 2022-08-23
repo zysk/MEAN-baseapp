@@ -70,6 +70,7 @@ app.use('/', express.static(path.join(process.cwd(), `/views/production/angular-
 /* Wildcard route */
 app.use('*', express.static(path.join(process.cwd(), `/views/production/angular-baseapp`)));
 
+
 /* Catch 404 and forward to error handler */
 app.use((req, res, next) => next(createError(404)));
 
