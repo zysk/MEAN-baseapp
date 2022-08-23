@@ -1,0 +1,13 @@
+@import 'src/styles-variable.scss';
+
+.header-container {
+  @apply h-10 flex justify-center items-center bg-black text-white;
+}
+.brand {
+  font-size: 1.56rem !important;
+  @apply text-white;
+}
+.brand:hover {
+  color:  $textLight !important;
+  @apply text-white;
+}

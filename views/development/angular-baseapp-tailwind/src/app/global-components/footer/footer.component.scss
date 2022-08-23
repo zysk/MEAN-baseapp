@@ -1,0 +1,9 @@
+@import 'src/styles-variable.scss';
+
+.footer-container {
+  font-size: 13px;
+  @apply h-6 flex justify-center items-center bg-black text-white;
+}
+.custom-anchor {
+  color: $textLight;
+}

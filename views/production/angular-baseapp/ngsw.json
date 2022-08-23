@@ -1,0 +1,206 @@
+{
+  "configVersion": 1,
+  "timestamp": 1659885291013,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/617.97ebf72f303a5df4.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.a75e3fee75b77b44.js",
+        "/manifest.webmanifest",
+        "/polyfills.136998aa0bf3fbe9.js",
+        "/runtime.b14f743def4f8af4.js",
+        "/styles.4492a82c01a249e2.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/dummy-json/navigation-links.json",
+        "/assets/fonts/_fonts.scss",
+        "/assets/fonts/font-families/arial/ArialMT.eot",
+        "/assets/fonts/font-families/arial/ArialMT.svg",
+        "/assets/fonts/font-families/arial/ArialMT.ttf",
+        "/assets/fonts/font-families/arial/ArialMT.woff",
+        "/assets/fonts/font-families/arial/ArialMT.woff2",
+        "/assets/fonts/font-families/calibri/Calibri.eot",
+        "/assets/fonts/font-families/calibri/Calibri.svg",
+        "/assets/fonts/font-families/calibri/Calibri.ttf",
+        "/assets/fonts/font-families/calibri/Calibri.woff",
+        "/assets/fonts/font-families/calibri/Calibri.woff2",
+        "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.eot",
+        "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.svg",
+        "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.ttf",
+        "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.woff",
+        "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.woff2",
+        "/assets/fonts/font-families/helvetica/Helvetica.eot",
+        "/assets/fonts/font-families/helvetica/Helvetica.svg",
+        "/assets/fonts/font-families/helvetica/Helvetica.ttf",
+        "/assets/fonts/font-families/helvetica/Helvetica.woff",
+        "/assets/fonts/font-families/helvetica/Helvetica.woff2",
+        "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.eot",
+        "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.svg",
+        "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.ttf",
+        "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.woff",
+        "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.woff2",
+        "/assets/images/noimg.jpg",
+        "/assets/theme-style-files/_date-picker.scss",
+        "/assets/theme-style-files/_default.scss",
+        "/assets/theme-style-files/_ngx-spinner.scss",
+        "/assets/theme-style-files/_project-level-global-styling.scss",
+        "/assets/theme-style-files/_scroll-bar.scss",
+        "/assets/theme-style-files/_snackbar.scss",
+        "/assets/theme-style-files/_sweet-alert.scss",
+        "/assets/theme-style-files/_variables.scss",
+        "/assets/theme-style-files/theme.scss",
+        "/bootstrap-icons.6fdf98f9eb97d9e7.woff2",
+        "/bootstrap-icons.dba5e3b77b478961.woff",
+        "/fa-brands-400.86c7e1fa6eef39e5.woff2",
+        "/fa-brands-400.f5defc2e23074ea1.ttf",
+        "/fa-regular-400.3edb900415298558.ttf",
+        "/fa-regular-400.e05509127408c2d4.woff2",
+        "/fa-solid-900.64d5644d62aa832c.woff2",
+        "/fa-solid-900.f418d876aec0af1a.ttf",
+        "/material-icons-outlined.ecaf031e8bd777ed.woff2",
+        "/material-icons-outlined.f7ea5a06680aa7e1.woff",
+        "/material-icons-round.3aab59045199567d.woff",
+        "/material-icons-round.dffed381bbd1912f.woff2",
+        "/material-icons-sharp.19cd372fb6b86b2a.woff2",
+        "/material-icons-sharp.2efdbf64369bc761.woff",
+        "/material-icons-two-tone.13e71fc69afcf8ef.woff2",
+        "/material-icons-two-tone.2ebf90cdae2abc54.woff",
+        "/material-icons.3705a31196184f2e.woff2",
+        "/material-icons.5b9775d40fb74d4e.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "application-APIs",
+      "patterns": [
+        "http:\\/\\/localhost:4200\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 1000,
+      "maxAge": 43200000,
+      "timeoutMs": 4000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    },
+    {
+      "name": "application-APIs",
+      "patterns": [
+        "http:\\/\\/application-name\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 1000,
+      "maxAge": 43200000,
+      "timeoutMs": 4000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/617.97ebf72f303a5df4.js": "2c1e7ae07fac45e9ded963f824429470bed1b9fb",
+    "/assets/dummy-json/navigation-links.json": "1e6f994a4d0c3548a00e810024fdcae2c6ecfee7",
+    "/assets/fonts/_fonts.scss": "8c2d07f5841302dfc40a8b978c2abc517ce32050",
+    "/assets/fonts/font-families/arial/ArialMT.eot": "148695f105dfd8144f97757aac7f58a6387c17fe",
+    "/assets/fonts/font-families/arial/ArialMT.svg": "8bb7ead3ce3a96a8adb919453f2fa1be12092d42",
+    "/assets/fonts/font-families/arial/ArialMT.ttf": "7564c83da3873fa90fc7a8d2286f7edc539757e2",
+    "/assets/fonts/font-families/arial/ArialMT.woff": "35d0f642b8240ad307681a60468d5fcaa89cf6da",
+    "/assets/fonts/font-families/arial/ArialMT.woff2": "b6cabca5406703a21078d72b7aafe7dcd0fe1b50",
+    "/assets/fonts/font-families/calibri/Calibri.eot": "be585975645ca2ca8e21b4fb77b4a55231265560",
+    "/assets/fonts/font-families/calibri/Calibri.svg": "51d6de03aab8e9be837bdc7a55b479d89ffc10d9",
+    "/assets/fonts/font-families/calibri/Calibri.ttf": "4c659d02759b287488583a0703fff4afe01dcf0b",
+    "/assets/fonts/font-families/calibri/Calibri.woff": "90442557caa69e2e908d400890cf45a4d465f379",
+    "/assets/fonts/font-families/calibri/Calibri.woff2": "a6ba9c46af34a2e23025ba14cbe27eb8fc8684c1",
+    "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.eot": "8f6af0e241c4cc4545098cc99bd460fe09012982",
+    "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.svg": "8473f8aeb9e6d792ee19f057269495c39172bb89",
+    "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.ttf": "17a5e9cb8bf0f201523ef56432dc45bcdb4106a2",
+    "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.woff": "f8db27feeaf05ec4c6b0d5ca3a2c14b1eb6009d7",
+    "/assets/fonts/font-families/helvetica-neue/HelveticaNeueLight.woff2": "93eb0ef1ed530fc404de2522b06d67f9ebf541c8",
+    "/assets/fonts/font-families/helvetica/Helvetica.eot": "ee1b4213e8f9aca3a28457c3adac7bdf3ab87ea9",
+    "/assets/fonts/font-families/helvetica/Helvetica.svg": "0422e9d8d04ee675abb40dcb4fa54cf6fe1e303d",
+    "/assets/fonts/font-families/helvetica/Helvetica.ttf": "f41c46766d010645f9ceaccf0f455936760b6377",
+    "/assets/fonts/font-families/helvetica/Helvetica.woff": "edbf293e77ab64edabab34e7358c183fdbf4e390",
+    "/assets/fonts/font-families/helvetica/Helvetica.woff2": "f8ab721187b0d4089c0d9a9a696076adfa76e348",
+    "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.eot": "c18fa83a0e92acbea2fa1a3ebf390843a194c612",
+    "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.svg": "89453bc4c12e01d3154f0d0bce41453c9bc9de18",
+    "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.ttf": "acb228e845c3bcca06fbbec6af2a78923a77be43",
+    "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.woff": "0c125996f9fc06ec8e153b36e1bbc3582778761c",
+    "/assets/fonts/font-families/source-sans-pro/SourceSansPro-Regular.woff2": "0b3f4eb6e5294d70bb4c5b8d03de77bbf6ac2cc4",
+    "/assets/images/noimg.jpg": "7301453e434df9295a120e4c0b69512ed5f86e52",
+    "/assets/theme-style-files/_date-picker.scss": "eb178e2566772b3db11916d4b725407fbd3f9ee1",
+    "/assets/theme-style-files/_default.scss": "24d13c4dcec50ecb1118a79fda43addf215053af",
+    "/assets/theme-style-files/_ngx-spinner.scss": "e74504daa2f7bb48e8ac38a8c0739d04b2450be8",
+    "/assets/theme-style-files/_project-level-global-styling.scss": "ee89d7febeb2ba048a470ac664e1935fdd908840",
+    "/assets/theme-style-files/_scroll-bar.scss": "b3f8b4f64f681c0d88c7f803d439de718835a9a0",
+    "/assets/theme-style-files/_snackbar.scss": "a8316e51932f4e13ab15d6129cda52b1a469d0ff",
+    "/assets/theme-style-files/_sweet-alert.scss": "98804cba4a5b4948dcb7a855da2f35efccb4f74e",
+    "/assets/theme-style-files/_variables.scss": "c5db711c0a93b318896b7095426781b1ac7fd21e",
+    "/assets/theme-style-files/theme.scss": "cf18549953a418794742809050f13936809126ca",
+    "/bootstrap-icons.6fdf98f9eb97d9e7.woff2": "3a284b0618771f29da8eb6be900e99439253dce0",
+    "/bootstrap-icons.dba5e3b77b478961.woff": "a77e6a2f335f3fcb4f2930794907c88ed7de7ca1",
+    "/fa-brands-400.86c7e1fa6eef39e5.woff2": "e219af1e3bbc2219359d3d0916e263b279c4abfd",
+    "/fa-brands-400.f5defc2e23074ea1.ttf": "fa5745d421c0fc90928626be98e9f8cf7580b327",
+    "/fa-regular-400.3edb900415298558.ttf": "9b26d745a1e69b23d71b7ea36d5de1209c997901",
+    "/fa-regular-400.e05509127408c2d4.woff2": "f7a09bcbd996fd634045d4e79b6504c945730686",
+    "/fa-solid-900.64d5644d62aa832c.woff2": "1979128e8ba1517d85f5e4ee505abf486c51557c",
+    "/fa-solid-900.f418d876aec0af1a.ttf": "e3339400ef6214cfa077d003daed2bfa659e2956",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "9f1f717051fd276cceb27852685c88e5c1efc84a",
+    "/main.a75e3fee75b77b44.js": "897eb087dbbe6889a4882a20a85da3873955ae0e",
+    "/manifest.webmanifest": "fe72035660ccae6558db35b125210758d111c070",
+    "/material-icons-outlined.ecaf031e8bd777ed.woff2": "955fd044ad401e12b1d0856282f9ffdf36106816",
+    "/material-icons-outlined.f7ea5a06680aa7e1.woff": "a61d7edfdc614e24b0d8e8d8f73dbfbb71727ad9",
+    "/material-icons-round.3aab59045199567d.woff": "3dda5a3fe5555997adafa3fbb3fd791ddf73cb1f",
+    "/material-icons-round.dffed381bbd1912f.woff2": "624cde41b7fd62c50b14c95b749dc2dce5e5381e",
+    "/material-icons-sharp.19cd372fb6b86b2a.woff2": "183ddaafb22f4e82218310dea8a1e553e9b3168f",
+    "/material-icons-sharp.2efdbf64369bc761.woff": "ac59a29fa36485c07d09ae18804fb39372b9db9e",
+    "/material-icons-two-tone.13e71fc69afcf8ef.woff2": "043704ed4b21da24b82f8ccdbf3d615a9586c8de",
+    "/material-icons-two-tone.2ebf90cdae2abc54.woff": "4f4f941ee18bca79058c4f8af465b493b5774e89",
+    "/material-icons.3705a31196184f2e.woff2": "60709a7f0c7ec3f3056fb0ea7d190fb01e382d55",
+    "/material-icons.5b9775d40fb74d4e.woff": "2844b8765d440ebda7847822563978e1f9ec3ce2",
+    "/polyfills.136998aa0bf3fbe9.js": "aabf019d05186b7e3506f90cbe8902de2fb574a8",
+    "/runtime.b14f743def4f8af4.js": "473f4dbacc4ce8513378ecf8b98b87477def310e",
+    "/styles.4492a82c01a249e2.css": "cdd60d1b43849ef7f082c312f813ca00e037c61d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
