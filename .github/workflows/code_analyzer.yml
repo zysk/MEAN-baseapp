@@ -1,19 +1,17 @@
 on:
-  # Trigger analysis when pushing in main or pull requests, and when creating
-  # a pull request.
   push:
     branches:
       - main
   pull_request:
       types: [opened, synchronize, reopened]
-name: SonarCloud Analysis
+name: Code Analysis
 jobs:
   code_analyze:
-    name: Code Analyzer
+    name: SonarCloud Analysis
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Code Analyzer
+      - name: SonarCloud Analysis
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
@@ -36,10 +34,12 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           # email subject
-          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          subject: Analysis completed on ${{ github.repository }}
           # email body as text
-          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          body: Analysis of ${{github.repository}} completed successfully! Please check you PR for details.
           # comma-separated string, send email to
-          to: ${{ secrets.EMAIL_RECIPIENTS }}
+          to: ${{ secrets.TO_EMAIL_RECIPIENTS }}
+          cc: ${{ secrets.CC_EMAIL_RECIPIENTS }}
           # from email name
           from: Github Code Analyzer
+          priority: high
