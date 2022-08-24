@@ -14,9 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Code Analyzer
-        with:
-          # Disabling shallow clone is recommended for improving relevancy of reporting
-          fetch-depth: 0
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
@@ -43,6 +40,6 @@ jobs:
           # email body as text
           body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           # comma-separated string, send email to
-          to: arijit.saha@zysk.tech,shilpa@zysk.tech
+          to: ${{ secrets.EMAIL_RECIPIENTS }}
           # from email name
-          from: Github
+          from: Github Code Analyzer
