@@ -8,14 +8,14 @@ on:
       types: [opened, synchronize, reopened]
 name: SonarCloud Analysis
 jobs:
-  sonarcloud:
+  code_analyze:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
-    - name: SonarCloud Scan
+    - name: Code Analyzer
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
