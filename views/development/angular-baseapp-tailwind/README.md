@@ -10,7 +10,7 @@ This README would document steps which are necessary to get your application up 
 
 * ### Version ###
 
-    Angular 14.*<br>
+    Angular 16.*<br>
 
 ## Configuration and Instructions ##
 

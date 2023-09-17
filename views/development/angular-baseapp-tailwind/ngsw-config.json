@@ -22,35 +22,8 @@
       "resources": {
         "files": [
           "/assets/**",
-          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
-        ],
-        "urls": []
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "name": "application-APIs",
-      "urls": [
-        "http://localhost:4200/**"
-      ],
-      "cacheConfig": {
-        "strategy": "performance",
-        "maxSize": 1000,
-        "maxAge": "12h",
-        "timeout": "4s"
-      }
-    },
-    {
-      "name": "application-APIs",
-      "urls": [
-        "http://application-name/**"
-      ],
-      "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 1000,
-        "maxAge": "12h",
-        "timeout": "4s"
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ]
       }
     }
   ]

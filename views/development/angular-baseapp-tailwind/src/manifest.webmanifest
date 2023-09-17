@@ -1,6 +1,6 @@
 {
-  "name": "angular-baseapp",
-  "short_name": "angular-baseapp",
+  "name": "angular-tailwind-rnd",
+  "short_name": "angular-tailwind-rnd",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

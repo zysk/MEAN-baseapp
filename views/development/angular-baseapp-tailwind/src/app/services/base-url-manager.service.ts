@@ -11,7 +11,7 @@ export class BaseUrlManagerService extends HashLocationStrategy {
    * loading of applications is decided by base URL through node.js.
    */
 
-  prepareExternalUrl(internal: string): string {
+  override prepareExternalUrl(internal: string): string {
     return this.getBaseHref() + '#' + internal;
   }
 
