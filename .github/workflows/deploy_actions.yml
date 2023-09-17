@@ -36,5 +36,4 @@ jobs:
           subject: Analysis completed on ${{ github.repository }}
           body: Analysis of ${{github.repository}} completed successfully! Please check you PR for details.
           to: ${{ secrets.TO_EMAIL_RECIPIENTS }}
-          cc: ${{ secrets.CC_EMAIL_RECIPIENTS }}
           from: Github Code Analyzer
