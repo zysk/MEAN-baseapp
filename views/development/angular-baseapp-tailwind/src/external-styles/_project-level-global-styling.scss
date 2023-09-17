@@ -1,0 +1,245 @@
+/* Theme styles */
+@import "./variables";
+@import "./date-picker";
+@import "./default";
+@import "./ngx-spinner";
+@import "./scroll-bar";
+@import "./snackbar";
+@import "./sweet-alert";
+
+/* Add page related style */
+.small-font {
+  font-size: $smallFontSize;
+}
+.fa,
+.fas,
+.far,
+.fab {
+  /* font-family: $fontawesome; */
+  font-weight: 500 !important;
+  font-size: 18px;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-0 {
+  opacity: 1;
+}
+
+/* Global color classes */
+.txt-red-500 {
+  color: $red500;
+}
+.txt-red-800 {
+  color: $red800;
+}
+.txt-gray-400 {
+  color: $gray400;
+}
+.txt-gray-500 {
+  color: $gray500;
+}
+.txt-gray-600 {
+  color: $gray600;
+}
+.txt-gray-700 {
+  color: $gray700;
+}
+.txt-gray-900 {
+  color: $gray900;
+}
+.txt-blue-400 {
+  color: $blue400;
+}
+.txt-blue-500 {
+  color: $blue500;
+}
+
+.txt-green-500 {
+  color: $green500;
+}
+.txt-green-800 {
+  color: $green800;
+}
+.txt-yellow-300 {
+  color: $yellow300;
+}
+.txt-indigo-100 {
+  color: $indigo100;
+}
+.txt-indigo-300 {
+  color: $indigo300;
+}
+.txt-indigo-600 {
+  color: $indigo600;
+}
+.txt-indigo-700 {
+  color: $indigo700;
+}
+/* Global font Weight classes */
+.fw-500 {
+  font-weight: 500;
+}
+
+/* Global bg classes */
+.bg-red-100 {
+  background: $red100;
+}
+.bg-red-300 {
+  background: $red300;
+}
+.bg-gray-50 {
+  background: $gray50;
+}
+.bg-gray-200 {
+  background: $gray200;
+}
+.bg-yellow-200 {
+  background: $yellow200;
+}
+.bg-yellow-300 {
+  background: $yellow300;
+}
+.bg-green-100 {
+  background: $green100;
+}
+.bg-green-300 {
+  background: $green300;
+}
+.bg-indigo-700 {
+  background: $indigo700 !important;
+}
+.bg-indigo-600:hover {
+  background: rgba(79, 70, 229, 1);
+}
+.bg-pink-300 {
+  background: #fda4af;
+}
+
+/* Global border classes */
+.br-gray-200 {
+  border-color: $gray200;
+}
+.rounded-5 {
+  border-radius: 0.5rem;
+}
+
+/* Global padding classes */
+.py-2px {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* Global Icon size classes */
+.icon-size {
+  font-size: 18px;
+}
+
+/* Global font size classes */
+.py-rem-125 {
+  padding-top: 0.125em;
+  padding-bottom: 0.125em;
+}
+.fs-rem-75 {
+  font-size: 0.75rem;
+}
+.fs-rem-875 {
+  font-size: 0.875rem;
+}
+.fs-rem-1125 {
+  font-size: 1.125rem;
+}
+
+.fs-rem-1875 {
+  font-size: 1.875rem;
+}
+.fs-sm-rem-1500 {
+  @media screen and (max-width: 640px) {
+    font-size: 1.5rem;
+  }
+}
+
+.font-10 {
+  font-size: 10px;
+  letter-spacing: 0.7px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-17 {
+  font-size: 17px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-13 {
+  font-size: 13px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-22 {
+  font-size: 22px;
+}
+.font-28 {
+  font-size: 28px;
+}
+.font-36 {
+  font-size: 36px;
+}
+.font-md-26 {
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+}
+/* Global Font weight classes */
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-800 {
+  font-weight: 800;
+}
+/* Letter spacing classes */
+.ls-em-n030 {
+  letter-spacing: -0.03em;
+}
+.grid-img {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+  @media screen and (min-width: 992px) {
+    height: 20vw;
+  }
+  /* object-position: center center; */
+}
+/* shadow */
+.shadow-small {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Line heights */
+.lh-125 {
+  line-height: 1.25;
+}
+
+/* max width */
+
+.max-w-56rem {
+  max-width: 56rem;
+}
+
+.max-w-42rem {
+  max-width: 42rem;
+}
+
+::ng-deep {
+  .mat-icon {
+    height: 20px;
+  }
+}

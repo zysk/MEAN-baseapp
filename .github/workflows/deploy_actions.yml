@@ -1,0 +1,40 @@
+name: Code Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  code_analyze:
+    name: SonarCloud Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  trigger_email:
+    name: Trigger Email
+    runs-on: ubuntu-latest
+    needs: code_analyze
+    if: always()
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: dawidd6/action-send-mail@v3.6.1
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Analysis completed on ${{ github.repository }}
+          body: Analysis of ${{github.repository}} completed successfully! Please check you PR for details.
+          to: ${{ secrets.TO_EMAIL_RECIPIENTS }}
+          cc: ${{ secrets.CC_EMAIL_RECIPIENTS }}
+          from: Github Code Analyzer
